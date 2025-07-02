@@ -25,31 +25,11 @@ pause
 
 :is_admin
 
-echo { > VSBT_VS2019.vsconfig
-echo   "version": "1.0", >> VSBT_VS2019.vsconfig
-echo   "components": [ >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.Roslyn.Compiler", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.Component.MSBuild", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.CoreBuildTools", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Workload.MSBuildTools", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.Windows10SDK", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.VC.CoreBuildTools", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.VC.Tools.x86.x64", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.VC.Redist.14.Latest", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.Windows10SDK.19041", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.VC.CMake.Project", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.TestTools.BuildTools", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.VC.ASAN", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.TextTemplating", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Component.VC.CoreIde", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core", >> VSBT_VS2019.vsconfig
-echo     "Microsoft.VisualStudio.Workload.VCTools" >> VSBT_VS2019.vsconfig
-echo   ] >> VSBT_VS2019.vsconfig
-echo } >> VSBT_VS2019.vsconfig
-
 set VSDIR=%cd%
 vs_BuildTools_2019.exe --config %VSDIR%\VSBT_VS2019.vsconfig ^
-  --norestart --passive --wait
+  --norestart --passive --wait ^
+  --add Microsoft.VisualStudio.Component.Roslyn.Compiler;Microsoft.Component.MSBuild;Microsoft.VisualStudio.Component.CoreBuildTools;Microsoft.VisualStudio.Workload.MSBuildTools;Microsoft.VisualStudio.Component.Windows10SDK;Microsoft.VisualStudio.Component.VC.CoreBuildTools;Microsoft.VisualStudio.Component.VC.Tools.x86.x64;Microsoft.VisualStudio.Component.VC.Redist.14.Latest;Microsoft.VisualStudio.Component.Windows10SDK.19041;Microsoft.VisualStudio.Component.VC.CMake.Project;Microsoft.VisualStudio.Component.TestTools.BuildTools;Microsoft.VisualStudio.Component.VC.ASAN;Microsoft.VisualStudio.Component.TextTemplating;Microsoft.VisualStudio.Component.VC.CoreIde;Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core;Microsoft.VisualStudio.Workload.VCTools
+
 
 exit
 
