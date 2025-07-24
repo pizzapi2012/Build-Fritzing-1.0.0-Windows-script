@@ -26,8 +26,10 @@ pause
 :is_admin
 
 set VSDIR=%cd%
-vs_BuildTools_2019.exe --config %VSDIR%\VSBT_VS2019.vsconfig ^
-  --norestart --passive --wait ^
+vs_BuildTools_2019.exe ^
+  --norestart ^
+  --passive ^
+  --wait ^
   --add ^
     Microsoft.VisualStudio.Component.Roslyn.Compiler;^
     Microsoft.Component.MSBuild;^Microsoft.VisualStudio.Component.CoreBuildTools;^
