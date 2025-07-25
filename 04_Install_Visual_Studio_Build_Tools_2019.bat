@@ -45,8 +45,7 @@ vs_BuildTools_2019.exe ^
     Microsoft.VisualStudio.Component.TextTemplating;^
     Microsoft.VisualStudio.Component.VC.CoreIde;^
     Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core;^
-    Microsoft.VisualStudio.Workload.VCTools;^
-    includeRecommended
+    Microsoft.VisualStudio.Workload.VCTools
 
 
 exit
