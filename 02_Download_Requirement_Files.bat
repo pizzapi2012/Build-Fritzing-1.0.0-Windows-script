@@ -58,7 +58,7 @@ if not exist openssl-3.0.12.zip DownloadFile https://web.archive.org/web/2023112
 rem https://ports.macports.org/port/polyclipping/
 rem polyclipping v6.4.2
 echo polyclipping v6.4.2
-if not exist clipper_ver6.4.2.zip DownloadFile https://jaist.dl.sourceforge.net/project/polyclipping/clipper_ver6.4.2.zip clipper_ver6.4.2.zip
+if not exist clipper_ver6.4.2.zip DownloadFile https://downloads.sourceforge.net/project/polyclipping/clipper_ver6.4.2.zip clipper_ver6.4.2.zip
 
 rem check download files
 if not exist PortableGit-2.42.0.2-64-bit.7z.exe goto failed
