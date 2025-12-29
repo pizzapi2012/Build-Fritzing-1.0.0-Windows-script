@@ -1,7 +1,7 @@
 @echo off
 rem 02_Download_Requirement_Files.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
-rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
+rem Copyright (c) 2023-2025 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
@@ -52,8 +52,8 @@ if not exist ngspice-42_dll_64.7z DownloadFile https://master.dl.sourceforge.net
 rem for Fritzing 1.0.2
 rem https://kb.firedaemon.com/support/solutions/articles/4000121705
 rem OpenSSL 3.0.12
-echo OpenSSL 3.0.12
-if not exist openssl-3.0.12.zip DownloadFile https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-3.0.12.zip openssl-3.0.12.zip
+echo OpenSSL 3.0.12 from Wayback Machine
+if not exist openssl-3.0.12.zip DownloadFile https://web.archive.org/web/20231128111045/https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-3.0.12.zip openssl-3.0.12.zip
 
 rem https://ports.macports.org/port/polyclipping/
 rem polyclipping v6.4.2
