@@ -1,10 +1,12 @@
 @echo off
 rem 08_Download_Fritzing_Source_code.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
-rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
+rem Copyright (c) 2023-2025 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
+
+call 00_env
 
 Path=%cd%\PortableGit\bin;%Path%
 
@@ -32,14 +34,18 @@ rem equivalent Fritzing 1.0.4 Oct 7, 2024
 rem set Fritzing_hash=a8c6ef7cf66f7a42b9b233d6137f1b70a9573a25
 
 rem equivalent Fritzing 1.0.5
-set Fritzing_hash=b9add9eaa7c426963de20c8514a69d3f15e83bdf
+rem set Fritzing_hash=b9add9eaa7c426963de20c8514a69d3f15e83bdf
+
+rem equivalent Fritzing 1.0.6 Commits on Oct 7, 2025
+rem set Fritzing_hash=04e5bb0241e8f1de24d0fce9be070041c6d5b68e
+
 git pull origin %Fritzing_hash%
 git checkout %Fritzing_hash%
 
-rem add git tag 1.0.5
+echo add git tag -a %Fritzing_Version% -m "" %Fritzing_hash%
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-git tag -a 1.0.5 -m "" %Fritzing_hash%
+git tag -a %Fritzing_Version% -m "" %Fritzing_hash%
 
 git show --format='%%H' --no-patch
 
