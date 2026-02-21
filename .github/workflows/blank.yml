@@ -33,5 +33,7 @@ jobs:
         run: |
           bitsadmin /TRANSFER hoge https://raw.githubusercontent.com/FREEWING-JP/Build-Fritzing-1.0.0-Windows-script/main/00_Download_Script.bat %cd%\00_Download_Script.bat
           00_Download_Script.bat
-          cd /d \00_fritzing
+      - name: Run script
+        run: |
+          cd /c \00_fritzing
           00_Execute_Script.bat
